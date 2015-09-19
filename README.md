@@ -2,6 +2,7 @@ rowbuffer其实算是造轮子了，主要是因为之前的项目大量使用�
 明年的预算里，单列了几台缓存的服务器，用于部署redis，以减轻系统IO的压力。
 
 这个rowbuffer主要由4个API
+
 1、func (bf *RowBuffer) get(key []interface) []string
 该函数用于从redis获取数据，当获取不到时会从数据库直接读，同时写入redis
 
